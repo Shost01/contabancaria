@@ -10,8 +10,11 @@ public class Menu {
 		
 		// Instanciamento | Classe -> Objeto utilizavel
 		Conta c1 = new Conta(1, 123, 1, "Maria das Neves", 10000.0f);
+		
+		//testando set
+		//c1.setSaldo(12000.0f);
+		
 		c1.visualizar();
-		c1.setSaldo(12000.0f);
 		c1.sacar(12000.0f);
 		c1.visualizar();
 		c1.depositar(5000.0f);
