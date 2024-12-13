@@ -2,31 +2,39 @@ package conta;
 
 import java.util.Scanner;
 import conta.model.Conta;
+import conta.model.ContaCorrente;
+import conta.model.ContaPoupanca;
 import conta.util.Cores;
 
 public class Menu {
+	
+	public static Scanner leia = new Scanner(System.in);
 
 	public static void main(String[] args) {
-		
-		// Instanciamento | Classe -> Objeto utilizavel
-		Conta c1 = new Conta(1, 123, 1, "Maria das Neves", 10000.0f);
-		
-		// Testando set
-		// c1.setSaldo(12000.0f);
-		// Testando get
-		// System.out.println(c1.getTitular());
-		c1.visualizar();
-		c1.sacar(12000.0f);
-		c1.visualizar();
-		c1.depositar(5000.0f);
-		c1.visualizar();
-		
-		
-		
-		Scanner leia = new Scanner(System.in);
-
 		int opcao;
+		// Instanciamento | Classe -> Objeto utilizavel
 
+		// Testando set
+		// cc1.setSaldo(12000.0f);
+		// Testando get
+		// System.out.println(cc1.getTitular());
+		
+		// Teste da Classe Conta Corrente
+		ContaCorrente cc1 = new ContaCorrente(2, 123, 1, "Mariana", 15000.0f, 1000.0f);
+		cc1.visualizar();
+		cc1.sacar(12000.0f);
+		cc1.visualizar();
+		cc1.depositar(5000.0f);
+		cc1.visualizar();
+		
+        // Teste da Classe Conta Poupança
+		ContaPoupanca cp1 = new ContaPoupanca(3, 123, 2, "Victor", 100000.0f, 15);
+		cp1.visualizar();
+        cp1.sacar(1000.0f);
+		cp1.visualizar();
+		cp1.depositar(5000.0f);
+		cp1.visualizar();
+		
 		while (true) {
 
 			System.out.println(Cores.TEXT_YELLOW + Cores.ANSI_BLACK_BACKGROUND

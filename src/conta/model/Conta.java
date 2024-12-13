@@ -1,6 +1,6 @@
 package conta.model;
 
-public class Conta {
+public abstract class Conta {
 
 	// Atributos
 	private int numero;
@@ -63,6 +63,8 @@ public class Conta {
 	public void setSaldo(float saldo) {
 		this.saldo = saldo;
 	}
+	
+	// Métodos
 	
 	public boolean sacar(float valor) {
 		
